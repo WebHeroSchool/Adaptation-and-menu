@@ -1,0 +1,168 @@
+@media (min-width: 320px) {
+  .menu__button > span,
+  .menu__button > span::before,
+  .menu__button > span::after {
+  visibility: hidden;
+  }
+}
+
+@media (min-width: 0) {
+  nav {
+    visibility: hidden;
+  }
+  .text__title {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 321px) {
+  a {
+    font-size: 12px;
+    margin: 5px;
+    }
+  nav {
+    visibility: visible;
+  }
+  .text__title {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 641px) {
+  a {
+    font-size: 30px;
+    margin: 0 10px;
+    }
+  .text__title {
+    font-size: 32px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 801px) {
+  a {
+    font-size: 32px;
+    margin: 0 30px;
+  }
+   .text__title {
+    font-size: 48px;
+    margin-left: 30px;
+  }
+}
+
+.text__title {
+  margin-top: 60px;
+}
+  
+a {
+    padding: 7px;
+    border: solid blue;
+  }
+  
+ nav {
+    margin-top: 28px;
+  }
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 26px;
+  left: 20px;
+  position: fixed;
+  top: 20px;
+  width: 26px;
+  z-index: 1;
+}
+
+.menu__button > span,
+.menu__button > span::before,
+.menu__button > span::after {
+  background: blue;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+}
+
+.menu__button > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__button > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__name {
+  display: block;
+  color: blue;
+  top: -8px;
+  left: -100%;
+  position: fixed;
+  }
+
+.menu__box {
+  background: #ECEFF1;
+  box-shadow: 1px 0px 6px grey;
+  display: block;
+  height: 100%;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 80px 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 300px;
+}
+
+.menu__item {
+  background-color: #ECEFF1;
+  color: #333;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 24px;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background: #CFD8DC;
+}
+
+#menu__toggle:checked ~ 
+  .menu__button,
+  .menu__button::before,
+  .menu__button::after {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__box {
+  left: 0;
+}
+
+#menu__toggle:checked ~ .menu__name {
+  left: 120px;
+  z-index: 1;
+}
+
+.menu__button > span,
+.menu__button > span::before,
+.menu__button > span::after {
+  transition-duration: .5s;
+}
+
+.menu__box,
+.menu__item,
+.menu__name {
+  transition-duration: .5s;
+}
